@@ -1,0 +1,40 @@
+//Mixing
+=transition($property: all, $time: $timing, $bezier: $easing)
+  transition: $property $time $bezier
+
+//Media Queries
+=from-screen($device)
+  @media screen and (min-width: $device)
+    @content
+
+=until-screen($device)
+  @media screen and (max-width: $device - 1px)
+    @content
+
+=mobile
+  @media screen and (max-width: $tablet - 1px)
+    @content
+
+=tablet
+  @media screen and (min-width: $tablet)
+    @content
+
+=laptop
+  @media screen and (min-width: $laptop)
+    @content
+
+=desktop
+  @media screen and (min-width: $desktop)
+    @content
+
+=widescreen
+  @media screen and (min-width: $widescreen)
+    @content
+
+=short
+  @media screen and (max-height: $screen-height - 1px)
+    @content
+
+=tall
+  @media screen and (min-height: $screen-height)
+    @content

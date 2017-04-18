@@ -1,0 +1,61 @@
+.info
+  width: 100%
+  margin-bottom: 3em
+  +laptop
+    width: 60%
+    margin-bottom: 0
+  +desktop
+    width: 50%
+
+.info-details
+  border-top: 6px solid $red
+  width: 85%
+  padding-top: 1em
+  margin-bottom: 2.5em
+
+.info-actions
+  button
+    margin: .25em
+
+.info-toggles
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+.info-divider
+  text-align: center
+  border-bottom: 1px solid $white
+  margin: 1.25em auto
+  width: 90%
+  h5
+    line-height: 2px
+    transform: translateY(2px)
+    width: 50px
+    margin: 0 auto
+    background: $black
+
+.info-compare
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+  margin: 0 auto
+  align-items: center
+  +tablet
+    justify-content: space-between
+    flex-wrap: nowrap
+    width: 85%
+  h5
+    width: 100%
+    text-align: center
+    font-size: 1em
+    margin-bottom: .75em
+    +tablet
+      width: initial
+      text-align: left
+      margin-bottom: 0
+  input
+    margin: 0 .5em
+    height: 30px
+    width: 50px
+    +tablet
+      width: initial

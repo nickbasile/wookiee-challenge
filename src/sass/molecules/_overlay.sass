@@ -1,0 +1,25 @@
+.overay-wrapper
+  display: flex
+  position: relative
+  +tablet
+    padding: 2em 4em
+
+.overlay
+  background: rgba($black, .75)
+  max-width: 1100px
+  padding: 2em 1em
+  margin: 0 auto
+  +tablet
+    background: rgba($black, .9)
+    padding: 3em
+
+.overlay-content
+  display: flex
+  flex-direction: column
+  +laptop
+    flex-direction: row
+  > div
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center

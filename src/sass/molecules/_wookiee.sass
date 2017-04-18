@@ -1,0 +1,34 @@
+.wookiee
+  justify-content: flex-start !important
+  width: 100%
+  +laptop
+    width: 40%
+  +desktop
+    width: 50%
+
+.wookiee-overlay
+  +transition(all, .5s)
+  margin-top: -500px
+
+.wookiee-tag
+  +transition(all, .5s)
+  background: $gold
+  padding: .25em .5em
+  position: absolute
+  margin-left: -90px
+  &:after
+    content: ''
+    width: 0
+    height: 0
+    position: absolute
+    border-top: 26px solid transparent
+    border-bottom: 26px solid transparent
+    border-left: 30px solid $gold
+    margin-top: -48px
+    margin-left: 100px
+  h4
+    color: $white
+    margin: 0
+  h5
+    color: $yellow
+    margin: .5em 0 0

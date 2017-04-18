@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SWAPI Wookie Heights</title>
+    <link rel="stylesheet" type="text/css" href="styles/app.css">
+</head>
+<body>
+    <div id="js-vue-binder" class="overay-wrapper">
+        <div class="overlay">
+            <div class="overlay-content">
+                <div class="info">
+                    <div class="info-details">
+                        <h1>HOW MANY</h1>
+                        <h1 class="sw-font" :class="[error == true ? 'error-shake' : '', welcome == true ? 'hello-zoom' : '']">Wookiees</h1>
+                        <h1>TALL?</h1>
+                        <p>Mandalore qui-gonn secura dantooine. Antilles coruscant yoda yavin dagobah han padm&eacute; twi'lek. Ponda mara gamorrean ben. Mon zabrak skywalker baba skywalker wicket solo. Hutt binks skywalker lars.</p>
+                    </div>
+                    <div class="info-actions">
+                        <div class="info-toggles">
+                            <button v-for="person in people" v-cloak class="button-primary" :class="[selectedPerson.name == person.name ? 'selected' : '']" @click.prevent="selectPerson(person)">{{person.name}}</button>
+                        </div>
+                        <div class="info-divider">
+                            <h5>OR</h5>
+                        </div>
+                        <div class="info-compare">
+                            <h5>SEE HOW YOU COMPARE</h5>
+                            <input type="number" placeholder="ft" v-model.number="feet">
+                            <input type="number" placeholder="in" v-model.number="inches">
+                            <button class="button-square" @click.prevent="checkUserHeight">&rang;</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="wookiee">
+                    <img class="wookiee-image" src="resources/images/wookiee.png" alt="A very fuzzy wookiee.">
+                    <img class="wookiee-overlay" :style="{clipPath: 'inset(0 0 '+ clipHeight +'px 0)'}" src="resources/images/wookiee-overlay.png" alt="An overlay showing how tall people are compared to a wookiee.">
+                    <div class="wookiee-tag" v-show="selectedPerson.name != undefined" :style="{marginTop: tooltipHeight + 'px'}" v-cloak>
+                        <h4>{{selectedPerson.name}}</h4>
+                        <h5>{{selectedPerson.wookieeRatio}} WOOKIEES</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

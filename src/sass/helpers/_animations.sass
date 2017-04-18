@@ -1,0 +1,30 @@
+@keyframes zoom
+  0%
+    transform: scale( 1 ) rotate(-4deg)
+  25%
+    transform: scale( 1.25 ) rotate(0deg)
+  50%
+    transform: scale( 1.5 ) rotate(4deg)
+  75%
+    transform: scale( 1.25 ) rotate(0deg)
+  100%
+    transform: scale( 1 ) rotate(-4deg)
+
+@keyframes shake
+  0%
+    transform: rotate(-4deg)
+  25%
+    transform: rotate(0deg)
+  50%
+    transform: rotate(4deg)
+    color: $red
+  75%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(-4deg)
+
+.hello-zoom
+  animation: zoom .75s linear
+
+.error-shake
+  animation: shake .5s linear 0s 2 !important

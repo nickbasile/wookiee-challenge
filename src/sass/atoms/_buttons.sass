@@ -1,0 +1,28 @@
+%base-button
+  background: url('./../resources/images/wood-bg-tile.png') repeat top left
+  border: none
+  border-bottom: 2px solid $gold
+  color: $white
+  font-family: $primary-font
+  font-weight: 900
+  font-size: 1.25em
+  border-radius: 3.69px
+  cursor: pointer
+  &:hover
+    background: $gold
+    border-bottom-color: $brown
+  &:focus
+    outline: none
+
+.button-primary
+  @extend %base-button
+  padding: .25em 1.5em
+  &.selected
+    background: $gold
+    border-bottom-color: $brown
+    &:hover
+      background: darken($gold, 5%)
+
+.button-square
+  @extend %base-button
+  padding: .25em .75em
